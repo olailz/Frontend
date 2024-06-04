@@ -1,0 +1,46 @@
+/* medico.component.css */
+.medico-container {
+  background-image: url('https://www.shutterstock.com/image-vector/character-nurses-doctors-wearing-n95-260nw-1726103149.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+}
+
+.medico-actions {
+  margin-bottom: 20px;
+}
+
+.button {
+  background-color: #00bcd4;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #0097a7;
+}
+
+.medico-list table {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.medico-list th,
+.medico-list td {
+  padding: 10px;
+}
+
+.medico-list .action-button {
+  background-color: #0288d1;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.medico-list .action-button:hover {
+  background-color: #01579b;
+}

@@ -1,0 +1,32 @@
+<div class="habitacion-container">
+  <div class="habitacion-header">
+    <h2>Gestión de Habitaciones</h2>
+  </div>
+  <div class="habitacion-actions">
+    <button class="button" (click)="mostrarHabitaciones()">Mostrar Habitaciones</button>
+  </div>
+
+  <div *ngIf="mostrarLista" class="habitacion-list">
+    <h2>Lista de Habitaciones</h2>
+    <table>
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th>Estado</th>
+        <th>Paciente</th>
+        <th>Acciones</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let habitacion of habitaciones">
+        <td>{{ habitacion.idroom }}</td>
+        <td>{{ habitacion.estado }}</td>
+        <td>{{ habitacion.idpatient?.name || 'N/A' }}</td>
+        <td>
+          <button class="action-button" (click)="actualizarInformacionHabitacion(habitacion.idroom)">Actualizar</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

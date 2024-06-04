@@ -1,0 +1,61 @@
+.report-container {
+  background-image: url('https://www.shutterstock.com/image-vector/clipboard-stethoscope-medical-check-form-600nw-1874538058.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.report-header {
+  text-align: center;
+  color: #004080; /* Color celeste */
+}
+
+.report-actions {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.search-by-id,
+.search-by-type-date {
+  margin-bottom: 10px;
+}
+
+.report-list {
+  background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semi-transparente */
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.report-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.report-list li {
+  margin-bottom: 10px;
+}
+
+.btn {
+  background-color: #004080; /* Color celeste */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.btn:hover {
+  background-color: #0059b3; /* Color celeste más oscuro al pasar el mouse */
+}
+
+.error-message {
+  text-align: center;
+  color: red;
+  font-weight: bold;
+}

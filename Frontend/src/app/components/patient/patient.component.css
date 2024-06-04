@@ -1,0 +1,130 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+
+.patient-container {
+  background-image: url('https://cdn2.hubspot.net/hubfs/2716137/mejorar%20experiencia%20pacientes%20cover.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #333;
+  max-width: 900px;
+  margin: 20px auto;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.patient-header {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.patient-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.patient-actions button, .search-field button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 25px;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.patient-actions button:hover, .search-field button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.search-field {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.search-field input {
+  padding: 12px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+  font-size: 16px;
+  width: 250px;
+}
+
+.patient-list {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.patient-list h2 {
+  text-align: center;
+  color: #333;
+}
+
+.patient-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.patient-list ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f9fa;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  color: #333;
+  transition: background-color 0.3s;
+}
+
+.patient-list ul li:hover {
+  background-color: #e2e6ea;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.patient-list ul li button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 25px;
+  font-size: 14px;
+  transition: background-color 0.3s, transform 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.patient-list ul li button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+

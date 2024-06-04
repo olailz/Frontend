@@ -1,0 +1,52 @@
+<!-- medico.component.html -->
+<div class="medico-container">
+  <div class="medico-header">
+    <h2>Gestión de Médicos</h2>
+  </div>
+  <div class="medico-actions">
+    <button class="button" (click)="mostrarMedicos()">Mostrar Médicos</button>
+    <button class="button" (click)="registrarNuevoMedico()">Registrar Nuevo Médico</button>
+
+    <div>
+      <input [(ngModel)]="searchId" placeholder="ID del Médico" />
+      <button class="button" (click)="buscarMedicoPorId()">Buscar Médico por ID</button>
+    </div>
+
+    <div>
+      <input [(ngModel)]="searchName" placeholder="Nombre del Médico" />
+      <button class="button" (click)="buscarMedicoPorNombre()">Buscar Médico por Nombre</button>
+    </div>
+  </div>
+
+  <div *ngIf="mostrarLista" class="medico-list">
+    <h2>Lista de Médicos</h2>
+    <table>
+      <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Especialidad</th>
+        <th>Teléfono</th>
+        <th>Dirección</th>
+        <th>Email</th>
+        <th>Acciones</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let medico of medicos">
+        <td>{{ medico.name }}</td>
+        <td>{{ medico.lastname }}</td>
+        <td>{{ medico.especiality.speciality }}</td>
+        <td>{{ medico.phone }}</td>
+        <td>{{ medico.adress }}</td>
+        <td>{{ medico.email }}</td>
+        <td>
+          <button class="action-button" (click)="actualizarInformacionMedico(medico.id)">Actualizar</button>
+          <button class="action-button" (click)="borrarMedico(medico.id)">Borrar</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+

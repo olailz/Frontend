@@ -1,0 +1,33 @@
+<div class="report-container">
+  <div class="report-header">
+    <h2>Gestión de Informes</h2>
+  </div>
+  <div class="report-actions">
+    <button class="btn" (click)="mostrarInformes()">Mostrar Informes</button>
+    <button class="btn" (click)="registrarNuevoInforme()">Registrar Nuevo Informe</button>
+
+    <div class="search-by-id">
+      <input [(ngModel)]="searchId" placeholder="ID del Informe" />
+      <button class="btn" (click)="buscarInformePorId()">Buscar Informe por ID</button>
+    </div>
+
+    <div class="search-by-type-date">
+      <input [(ngModel)]="searchType" placeholder="Tipo de Informe" />
+      <input [(ngModel)]="searchDate" type="Date" placeholder="Fecha del Informe" />
+      <button class="btn" (click)="buscarInformePorTipoYFecha()">Buscar Informe por Tipo y Fecha</button>
+    </div>
+  </div>
+  <div *ngIf="errorMessage" class="error-message">
+    {{ errorMessage }}
+  </div>
+  <div *ngIf="mostrarLista" class="report-list">
+    <h2>Lista de Informes</h2>
+    <ul>
+      <li *ngFor="let report of reports">
+        Tipo: {{ report.reportType }} - fecha {{ report.generationDate | date }}
+        <button class="btn" (click)="actualizarInformacionInforme(report.idReport)">Actualizar</button>
+        <button class="btn" (click)="borrarInforme(report.idReport)">Borrar</button>
+      </li>
+    </ul>
+  </div>
+</div>

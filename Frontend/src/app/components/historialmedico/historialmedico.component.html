@@ -1,0 +1,45 @@
+<div class="historial-medico-container">
+  <div class="historial-medico-header">
+    <h2>Gestión de Historiales Médicos</h2>
+  </div>
+  <div class="historial-medico-actions">
+    <button class="button" (click)="mostrarHistorialesMedicos()">Mostrar Historiales Médicos</button>
+    <button class="button" (click)="registrarNuevoHistorialMedico()">Registrar Nuevo Historial Médico</button>
+
+    <div>
+      <input [(ngModel)]="searchId" placeholder="ID del Historial Médico" />
+      <button class="button" (click)="buscarHistorialMedicoPorId()">Buscar Historial Médico por ID</button>
+    </div>
+  </div>
+
+  <div *ngIf="mostrarLista" class="historial-medico-list">
+    <h2>Lista de Historiales Médicos</h2>
+    <table>
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th>Paciente</th>
+        <th>Doctor</th>
+        <th>Fecha de Consulta</th>
+        <th>Diagnóstico</th>
+        <th>Tratamiento</th>
+        <th>Acciones</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let historial of historialesMedicos">
+        <td>{{ historial.idHistory }}</td>
+        <td>{{ historial.idpatient.name }} {{ historial.idpatient.lastname }}</td>
+        <td>{{ historial.id_doctor.name }} {{ historial.id_doctor.lastname }}</td>
+        <td>{{ historial.consultationDate | date }}</td>
+        <td>{{ historial.diagnosis }}</td>
+        <td>{{ historial.treatament }}</td>
+        <td>
+          <button class="action-button" (click)="actualizarInformacionHistorialMedico(historial.idHistory)">Actualizar</button>
+          <button class="action-button" (click)="borrarHistorialMedico(historial.idHistory)">Borrar</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

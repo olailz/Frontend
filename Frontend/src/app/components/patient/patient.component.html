@@ -1,0 +1,33 @@
+<<div class="patient-container">
+  <div class="patient-header">
+    <h2>Gestión de Pacientes</h2>
+  </div>
+  <div class="patient-actions">
+    <button (click)="mostrarPacientes()">Mostrar Pacientes</button>
+    <button (click)="registrarNuevoPaciente()">Registrar Nuevo Paciente</button>
+
+    <div class="search-field">
+      <input [(ngModel)]="searchId" placeholder="ID del Paciente" />
+      <button (click)="buscarPacientePorId()">Buscar Paciente por ID</button>
+    </div>
+
+    <div class="search-field">
+      <input [(ngModel)]="searchName" placeholder="Nombre del Paciente" />
+      <button (click)="buscarPacientePorNombre()">Buscar Paciente por Nombre</button>
+    </div>
+  </div>
+
+  <div *ngIf="mostrarLista" class="patient-list animate__animated animate__fadeIn">
+    <h2>Lista de Pacientes</h2>
+    <ul>
+      <li *ngFor="let patient of patients">
+        <span>Nombre: {{ patient.name }} - Fecha de Nacimiento: {{ patient.birthdate | date }} telefono: {{patient.phone}}</span>
+        <div class="action-buttons">
+          <button (click)="actualizarInformacionPaciente(patient.id)">Actualizar</button>
+          <button (click)="borrarPaciente(patient.id)">Borrar</button>{{patient | json}}
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+

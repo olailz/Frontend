@@ -1,0 +1,31 @@
+<!-- form-medico.component.html -->
+<div class="form-medico-container">
+  <h2>{{ isUpdateMode ? 'Actualizar Médico' : 'Registrar Nuevo Médico' }}</h2>
+  <form (ngSubmit)="saveMedico()">
+    <div>
+      <label for="name">Nombre:</label>
+      <input id="name" [(ngModel)]="medico.name" name="name" required />
+    </div>
+    <div>
+      <label for="lastname">Apellido:</label>
+      <input id="lastname" [(ngModel)]="medico.lastname" name="lastname" required />
+    </div>
+    <div>
+      <label for="especiality">Especialidad:</label>
+      <input id="especiality" [(ngModel)]="medico.especiality" name="especiality" required />
+    </div>
+    <div>
+      <label for="phone">Teléfono:</label>
+      <input id="phone" [(ngModel)]="medico.phone" name="phone" required />
+    </div>
+    <div>
+      <label for="address">Dirección:</label>
+      <input id="address" [(ngModel)]="medico.adress" name="address" required />
+    </div>
+    <div>
+      <label for="email">Email:</label>
+      <input id="email" [(ngModel)]="medico.email" name="email" required />
+    </div>
+    <button type="submit">{{ isUpdateMode ? 'Actualizar' : 'Registrar' }}</button>
+  </form>
+</div>

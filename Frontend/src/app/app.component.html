@@ -1,0 +1,26 @@
+<nav>
+  <button routerLink="/patients">Pacientes</button>
+  <button routerLink="/medicos">Médicos</button>
+  <button routerLink="/historiales-medicos">Historial Médico</button>
+  <button routerLink="/appointments">Citas</button>
+  <button routerLink="/habitaciones">Habitaciones</button>
+  <button routerLink="/reports">Informes</button>
+</nav>
+<router-outlet></router-outlet>
+<div *ngIf="showContent" class="content animate__animated animate__fadeIn">
+  <h1>Bienvenidos a Nuestro Hospital</h1>
+  <p>Nuestro hospital está dedicado a proporcionar servicios de salud de la más alta calidad a nuestra comunidad. Estamos comprometidos con el bienestar y la recuperación de nuestros pacientes, asegurándonos de que reciban una atención compasiva e integral.</p>
+  <h2>Nuestra Filosofía</h2>
+  <p>En nuestro hospital, creemos en un enfoque centrado en el paciente, enfocándonos en cuidados personalizados que satisfacen las necesidades únicas de cada individuo. Nos esforzamos por crear un entorno de curación que apoye tanto la salud física como emocional.</p>
+  <h2>Nuestros Valores</h2>
+  <ul>
+    <li>Compasión: Tratamos a nuestros pacientes con empatía y amabilidad.</li>
+    <li>Integridad: Mantenemos los más altos estándares de honestidad y ética.</li>
+    <li>Excelencia: Buscamos la excelencia en todos los aspectos de la atención médica.</li>
+    <li>Respeto: Respetamos la dignidad y los derechos de cada paciente.</li>
+    <li>Trabajo en equipo: Trabajamos de manera colaborativa para lograr los mejores resultados para nuestros pacientes.</li>
+  </ul>
+</div>
+
+<!-- Aquí se renderizarán los componentes en función de la ruta -->
+

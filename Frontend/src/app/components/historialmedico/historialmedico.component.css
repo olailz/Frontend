@@ -1,0 +1,43 @@
+/* consulta-medica.component.css */
+.historial-medico-container {
+  background-image: url('https://www.partnermd.com/hubfs/Blog%20Images%20%28Optimized%29/modern-hospital-building-picture-id1312706413%20%281%29%20%281%29.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+}
+
+.historial-medico-header {
+  margin-bottom: 20px;
+}
+
+.historial-medico-actions {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.historial-medico-actions .button {
+  margin: 5px 0;
+}
+
+.historial-medico-list {
+  margin-top: 20px;
+}
+
+.historial-medico-list table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.historial-medico-list th, .historial-medico-list td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.historial-medico-list th {
+  background-color: #f2f2f2;
+}
+
+.action-button {
+  margin-right: 10px;
+}

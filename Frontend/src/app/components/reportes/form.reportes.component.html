@@ -1,0 +1,24 @@
+<div class="form-container" @fadeIn>
+  <h2>{{ isUpdate ? 'Actualizar Informe' : 'Registrar Nuevo Informe' }}</h2>
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="idPatient">ID del Paciente:</label>
+      <input [(ngModel)]="report.idPatient" name="idPatient" required />
+    </div>
+    <div class="form-group">
+      <label for="generationDate">Fecha de Generación:</label>
+      <input [(ngModel)]="report.generationDate" name="generationDate" type="date" required />
+    </div>
+    <div class="form-group">
+      <label for="reportType">Tipo de Informe:</label>
+      <input [(ngModel)]="report.reportType" name="reportType" required />
+    </div>
+    <div class="form-group">
+      <label for="conten">Contenido:</label>
+      <textarea [(ngModel)]="report.conten" name="conten" required></textarea>
+    </div>
+    <button type="submit" class="btn">{{ isUpdate ? 'Actualizar' : 'Registrar' }}</button>
+  </form>
+</div>
+
+

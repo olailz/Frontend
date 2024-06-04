@@ -1,0 +1,14 @@
+<div class="form-habitacion-container">
+  <h2>{{ isUpdateMode ? 'Actualizar Habitación' : 'Registrar Nueva Habitación' }}</h2>
+  <form (ngSubmit)="saveHabitacion()">
+    <div>
+      <label for="estado">Estado:</label>
+      <input id="estado" [(ngModel)]="habitacion.estado" name="estado" required />
+    </div>
+    <div>
+      <label for="idpatient">ID Paciente:</label>
+      <input id="idpatient" [(ngModel)]="habitacion.idpatient" name="idpatient" />
+    </div>
+    <button type="submit">{{ isUpdateMode ? 'Actualizar' : 'Registrar' }}</button>
+  </form>
+</div>

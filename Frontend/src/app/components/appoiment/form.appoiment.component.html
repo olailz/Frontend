@@ -1,0 +1,34 @@
+<div class="form-appoiment-container">
+  <h2>{{ isUpdateMode ? 'Actualizar Cita Médica' : 'Registrar Nueva Cita Médica' }}</h2>
+  <form (ngSubmit)="saveAppoiment()">
+    <div>
+      <label for="idpatient">ID del Paciente:</label>
+      <input id="idpatient" [(ngModel)]="appoiment.idpatient" name="idpatient" required />
+    </div>
+    <div>
+      <label for="iddoctor">ID del Médico:</label>
+      <input id="iddoctor" [(ngModel)]="appoiment.iddoctor" name="iddoctor" required />
+    </div>
+    <div>
+      <label for="idroom">ID de la Sala:</label>
+      <input id="idroom" [(ngModel)]="appoiment.idroom" name="idroom" required />
+    </div>
+    <div>
+      <label for="dateappoiment">Fecha:</label>
+      <input id="dateappoiment" [(ngModel)]="appoiment.dateappoiment" name="dateappoiment" required />
+    </div>
+    <div>
+      <label for="appoimenttime">Hora:</label>
+      <input id="appoimenttime" [(ngModel)]="appoiment.appoimenttime" name="appoimenttime" required />
+    </div>
+    <div>
+      <label for="status">Estado:</label>
+      <input id="status" [(ngModel)]="appoiment.status" name="status" required />
+    </div>
+    <div>
+      <label for="observacion">Observación:</label>
+      <input id="observacion" [(ngModel)]="appoiment.observacion" name="observacion" required />
+    </div>
+    <button type="submit" class="button">{{ isUpdateMode ? 'Actualizar' : 'Registrar' }}</button>
+  </form>
+</div>

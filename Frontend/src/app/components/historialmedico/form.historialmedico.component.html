@@ -1,0 +1,26 @@
+<div class="form-historial-medico-container">
+  <h2>{{ isUpdateMode ? 'Actualizar Historial Médico' : 'Registrar Nuevo Historial Médico' }}</h2>
+  <form (ngSubmit)="saveHistorial()">
+    <div>
+      <label for="idpatient">ID Paciente</label>
+      <input [(ngModel)]="historial.idpatient.id" id="idpatient" name="idpatient" required />
+    </div>
+    <div>
+      <label for="id_doctor">ID Doctor</label>
+      <input [(ngModel)]="historial.id_doctor.id" id="id_doctor" name="id_doctor" required />
+    </div>
+    <div>
+      <label for="consultationDate">Fecha de Consulta</label>
+      <input [(ngModel)]="historial.consultationDate" id="consultationDate" name="consultationDate" type="date" required />
+    </div>
+    <div>
+      <label for="diagnosis">Diagnóstico</label>
+      <input [(ngModel)]="historial.diagnosis" id="diagnosis" name="diagnosis" required />
+    </div>
+    <div>
+      <label for="treatament">Tratamiento</label>
+      <input [(ngModel)]="historial.treatament" id="treatament" name="treatment" required />
+    </div>
+    <button type="submit" class="button">{{ isUpdateMode ? 'Actualizar' : 'Registrar' }}</button>
+  </form>
+</div>

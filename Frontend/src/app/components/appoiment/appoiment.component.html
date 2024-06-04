@@ -1,0 +1,51 @@
+<div class="appoiment-container">
+  <div class="appoiment-header">
+    <h2>Gestión de Citas Médicas</h2>
+  </div>
+  <div class="appoiment-actions">
+    <button class="button" (click)="mostrarAppoiments()">Mostrar Citas Médicas</button>
+    <button class="button" (click)="registrarNuevaAppoiment()">Registrar Nueva Cita Médica</button>
+
+    <div>
+      <input [(ngModel)]="searchId" placeholder="ID de la Cita Médica" />
+      <button class="button" (click)="buscarAppoimentPorId()">Buscar Cita Médica por ID</button>
+    </div>
+  </div>
+
+  <div *ngIf="mostrarLista" class="appoiment-list">
+    <h2>Lista de Citas Médicas</h2>
+    <table>
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th>ID Paciente</th>
+        <th>ID Médico</th>
+        <th>ID Sala</th>
+        <th>Fecha</th>
+        <th>Hora</th>
+        <th>Estado</th>
+        <th>Observación</th>
+        <th>Acciones</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let appoiment of appoiments">
+        <td>{{ appoiment.idappoiment }}</td>
+        <td>{{ appoiment.idpatient }}</td>
+        <td>{{ appoiment.iddoctor }}</td>
+        <td>{{ appoiment.idroom }}</td>
+        <td>{{ appoiment.dateappoiment | date }}</td>
+        <td>{{ appoiment.appoimenttime }}</td>
+        <td>{{ appoiment.status }}</td>
+        <td>{{ appoiment.observacion }}</td>
+        <td>
+          <button class="action-button" (click)="actualizarInformacionAppoiment(appoiment.idappoiment)">Actualizar</button>
+          <button class="action-button" (click)="borrarAppoiment(appoiment.idappoiment)">Borrar</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
